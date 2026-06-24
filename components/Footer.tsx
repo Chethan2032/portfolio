@@ -15,10 +15,10 @@ export default function Footer() {
 
         <div className="flex gap-3">
           {[
-            { Icon: GithubIcon, href: "https://github.com/", label: "GitHub" },
+            { Icon: GithubIcon, href: "https://github.com/Chethan2032", label: "GitHub" },
             { Icon: LinkedinIcon, href: "https://linkedin.com/", label: "LinkedIn" },
-            { Icon: InstagramIcon, href: "https://instagram.com/", label: "Instagram" },
-            { Icon: MailIcon, href: "mailto:your@email.com", label: "Email" },
+            { Icon: InstagramIcon, href: "https://www.instagram.com/chethan.2032/", label: "Instagram" },
+            { Icon: MailIcon, href: "mailto:gchethan2128@gmail.com", label: "Email" },
           ].map(({ Icon, href, label }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
               className="p-2 rounded-full glass border border-white/8 text-white/40 hover:text-white hover:border-indigo-500/30 transition-all">

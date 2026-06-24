@@ -93,10 +93,10 @@ export default function Hero() {
               className="flex gap-4 mt-8 justify-center md:justify-start"
             >
               {[
-                { Icon: GithubIcon, href: "https://github.com/", label: "GitHub" },
+                { Icon: GithubIcon, href: "https://github.com/Chethan2032", label: "GitHub" },
                 { Icon: LinkedinIcon, href: "https://linkedin.com/", label: "LinkedIn" },
-                { Icon: InstagramIcon, href: "https://instagram.com/", label: "Instagram" },
-                { Icon: MailIcon, href: "mailto:your@email.com", label: "Email" },
+                { Icon: InstagramIcon, href: "https://www.instagram.com/chethan.2032/", label: "Instagram" },
+                { Icon: MailIcon, href: "mailto:gchethan2128@gmail.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { MailIcon, LinkedinIcon, GithubIcon, InstagramIcon, SendIcon, MapPinIcon } from "./icons";
 
 const socials = [
-  { Icon: MailIcon, label: "Email", value: "your@email.com", href: "mailto:your@email.com", color: "text-red-400 border-red-500/20 bg-red-500/10" },
+  { Icon: MailIcon, label: "Email", value: "gchethan2128@gmail.com", href: "mailto:gchethan2128@gmail.com", color: "text-red-400 border-red-500/20 bg-red-500/10" },
   { Icon: LinkedinIcon, label: "LinkedIn", value: "linkedin.com/in/chethan", href: "https://linkedin.com/", color: "text-blue-400 border-blue-500/20 bg-blue-500/10" },
-  { Icon: GithubIcon, label: "GitHub", value: "github.com/chethan", href: "https://github.com/", color: "text-white/80 border-white/10 bg-white/5" },
-  { Icon: InstagramIcon, label: "Instagram", value: "@chethan", href: "https://instagram.com/", color: "text-pink-400 border-pink-500/20 bg-pink-500/10" },
+  { Icon: GithubIcon, label: "GitHub", value: "github.com/Chethan2032", href: "https://github.com/Chethan2032", color: "text-white/80 border-white/10 bg-white/5" },
+  { Icon: InstagramIcon, label: "Instagram", value: "@chethan.2032", href: "https://www.instagram.com/chethan.2032/", color: "text-pink-400 border-pink-500/20 bg-pink-500/10" },
 ];
 
 export default function Contact() {

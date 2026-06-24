@@ -11,18 +11,31 @@ const projects = [
     emoji: "🌐",
     color: "from-indigo-500/20 to-violet-500/20",
     border: "border-indigo-500/20",
-    github: "https://github.com/",
+    github: "https://github.com/Chethan2032",
     live: "#",
+    badge: null,
   },
   {
-    title: "Clothing Brand Website",
-    description: "Full website and digital branding for my clothing brand — including product showcases, brand identity, and an engaging online presence.",
-    tags: ["HTML", "CSS", "JavaScript", "Branding"],
+    title: "ARITKX",
+    description: "My clothing brand — a creative venture blending streetwear aesthetics with bold identity. Website and full brand experience coming soon.",
+    tags: ["Branding", "Fashion", "Entrepreneurship"],
     emoji: "👕",
     color: "from-pink-500/20 to-rose-500/20",
     border: "border-pink-500/20",
-    github: "https://github.com/",
-    live: "#",
+    github: null,
+    live: null,
+    badge: "Coming Soon",
+  },
+  {
+    title: "Freelance Projects",
+    description: "Web development and tech solutions delivered to clients as a freelancer — building real-world experience across different industries and requirements.",
+    tags: ["HTML", "CSS", "JavaScript", "Client Work"],
+    emoji: "💼",
+    color: "from-amber-500/20 to-orange-500/20",
+    border: "border-amber-500/20",
+    github: "https://github.com/Chethan2032",
+    live: null,
+    badge: null,
   },
   {
     title: "University Programming Projects",
@@ -31,8 +44,9 @@ const projects = [
     emoji: "🎓",
     color: "from-emerald-500/20 to-teal-500/20",
     border: "border-emerald-500/20",
-    github: "https://github.com/",
+    github: "https://github.com/Chethan2032",
     live: null,
+    badge: null,
   },
   // Add more projects below 👇
 ];
@@ -71,6 +85,11 @@ export default function Projects() {
             >
               <div className={`relative h-44 bg-gradient-to-br ${p.color} flex items-center justify-center border-b ${p.border}`}>
                 <span className="text-6xl">{p.emoji}</span>
+                {p.badge && (
+                  <span className="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full bg-pink-500/20 border border-pink-500/30 text-pink-300 font-medium">
+                    {p.badge}
+                  </span>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
               </div>
 
@@ -87,10 +106,12 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-3 mt-5">
-                  <a href={p.github} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors">
-                    <GithubIcon size={14} /> Code
-                  </a>
+                  {p.github && (
+                    <a href={p.github} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors">
+                      <GithubIcon size={14} /> Code
+                    </a>
+                  )}
                   {p.live && (
                     <a href={p.live} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300 transition-colors">

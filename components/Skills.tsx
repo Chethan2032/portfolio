@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const skills = [
   { name: "C Programming", icon: "⚙️", level: 75, color: "from-blue-500 to-blue-700" },
-  { name: "C++", icon: "🔷", level: 65, color: "from-sky-500 to-sky-700" },
+  { name: "C++", icon: "🔷", level: 70, color: "from-sky-500 to-sky-700" },
   { name: "Python", icon: "🐍", level: 80, color: "from-yellow-500 to-yellow-700" },
   { name: "HTML", icon: "🌐", level: 85, color: "from-orange-500 to-orange-700" },
   { name: "CSS", icon: "🎨", level: 80, color: "from-blue-400 to-blue-600" },
