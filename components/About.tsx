@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const highlights = [
-  { label: "Age", value: "19", icon: "🎂" },
+  { label: "Age", value: "19", icon: "" },
   { label: "University", value: "Deakin University", icon: "🎓" },
   { label: "Role", value: "Student, Freelancer & Developer", icon: "💼" },
   { label: "Location", value: "Melbourne, Australia", icon: "📍" },

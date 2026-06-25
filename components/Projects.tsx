@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { GithubIcon, PlusIcon } from "./icons";
+import { GithubIcon } from "./icons";
 
 // ── Edit or add projects here ──────────────────────────────────────────────
 const projects = [
@@ -106,20 +106,6 @@ export default function Projects() {
             </motion.div>
           ))}
 
-          {/* Placeholder */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: projects.length * 0.1 }}
-            className="glass border border-dashed border-white/10 rounded-3xl flex flex-col items-center justify-center p-8 text-center min-h-[280px] group hover:border-indigo-500/30 transition-all"
-          >
-            <div className="p-3 rounded-full glass border border-white/10 mb-4 group-hover:border-indigo-500/30 transition-all">
-              <PlusIcon size={20} className="text-white/30 group-hover:text-indigo-400 transition-colors" />
-            </div>
-            <p className="text-white/30 text-sm group-hover:text-white/50 transition-colors">More coming soon</p>
-            <p className="text-white/15 text-xs mt-1">Edit <code className="text-indigo-400/50">Projects.tsx</code> to add</p>
-          </motion.div>
         </div>
       </div>
     </section>
