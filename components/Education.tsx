@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { GraduationCapIcon, BookOpenIcon, AwardIcon } from "./icons";
+import { GraduationCapIcon, BookOpenIcon } from "./icons";
 
-const courses = [
+const deakinCourses = [
   "Introduction to Programming (C)",
   "Data Structures & Algorithms",
   "Database Systems",
@@ -30,108 +30,69 @@ export default function Education() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="space-y-6 max-w-3xl mx-auto">
+          {/* Narayana */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass border border-white/8 rounded-3xl p-8 glow-border"
+            className="glass border border-white/8 rounded-3xl p-7 flex items-start gap-5"
           >
-            <div className="flex items-start gap-4 mb-6">
-              <div className="p-3 rounded-2xl bg-indigo-500/10 border border-indigo-500/20">
-                <GraduationCapIcon size={28} className="text-indigo-400" />
-              </div>
-              <div>
-                <p className="text-xs text-indigo-400 uppercase tracking-widest mb-1">Currently Attending</p>
-                <h3 className="text-xl font-bold text-white">Deakin University</h3>
-                <p className="text-white/50 text-sm">Melbourne, Victoria, Australia</p>
-              </div>
+            <div className="p-3 rounded-2xl bg-orange-500/10 border border-orange-500/20 shrink-0">
+              <GraduationCapIcon size={24} className="text-orange-400" />
             </div>
-
-            <div className="space-y-4">
-              {[
-                { label: "Degree", value: "Bachelor of Computer Science" },
-                { label: "Major", value: "Data Science" },
-                { label: "Status", value: "In Progress", green: true },
-                { label: "Location", value: "Melbourne, AU" },
-              ].map(({ label, value, green }) => (
-                <div key={label} className="flex justify-between items-center py-3 border-b border-white/5 last:border-0">
-                  <span className="text-white/50 text-sm">{label}</span>
-                  {green ? (
-                    <span className="text-green-400 text-sm font-medium flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                      {value}
-                    </span>
-                  ) : (
-                    <span className="text-white text-sm font-medium">{value}</span>
-                  )}
-                </div>
-              ))}
+            <div className="flex-1">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h3 className="text-lg font-bold text-white">Narayana IIT Coaching</h3>
+                <span className="text-xs px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400">
+                  Completed
+                </span>
+              </div>
+              <p className="text-indigo-300 text-sm font-medium mb-1">12th Grade — Science</p>
+              <p className="text-white/40 text-sm">India</p>
             </div>
           </motion.div>
 
-          <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="glass border border-white/8 rounded-3xl p-6"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 rounded-xl bg-violet-500/10 border border-violet-500/20">
-                  <BookOpenIcon size={18} className="text-violet-400" />
-                </div>
-                <h4 className="font-semibold text-white">Relevant Coursework</h4>
+          {/* Deakin */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="glass border border-indigo-500/20 rounded-3xl p-7"
+          >
+            <div className="flex items-start gap-5 mb-6">
+              <div className="p-3 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 shrink-0">
+                <GraduationCapIcon size={24} className="text-indigo-400" />
               </div>
-              <div className="flex flex-wrap gap-2">
-                {courses.map((c) => (
-                  <span key={c} className="text-xs px-3 py-1.5 rounded-full glass border border-white/8 text-white/60">
-                    {c}
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                  <h3 className="text-lg font-bold text-white">Deakin University</h3>
+                  <span className="text-xs px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+                    In Progress
                   </span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="glass border border-white/8 rounded-3xl p-6"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 rounded-xl bg-pink-500/10 border border-pink-500/20">
-                  <AwardIcon size={18} className="text-pink-400" />
                 </div>
-                <h4 className="font-semibold text-white">Focus Areas</h4>
+                <p className="text-indigo-300 text-sm font-medium mb-1">Bachelor of Computer Science — Major: Data Science</p>
+                <p className="text-white/40 text-sm">Melbourne, Victoria, Australia</p>
               </div>
-              <div className="space-y-3">
-                {[
-                  { label: "Data Science & ML", pct: 85 },
-                  { label: "Software Development", pct: 75 },
-                  { label: "Web Technologies", pct: 70 },
-                ].map(({ label, pct }) => (
-                  <div key={label}>
-                    <div className="flex justify-between text-xs mb-1.5">
-                      <span className="text-white/60">{label}</span>
-                      <span className="text-white/40">{pct}%</span>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-white/5">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${pct}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.3 }}
-                        className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500"
-                      />
-                    </div>
-                  </div>
-                ))}
+            </div>
+
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-xl bg-violet-500/10 border border-violet-500/20">
+                <BookOpenIcon size={16} className="text-violet-400" />
               </div>
-            </motion.div>
-          </div>
+              <h4 className="text-sm font-medium text-white/70">Relevant Coursework</h4>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {deakinCourses.map((c) => (
+                <span key={c} className="text-xs px-3 py-1.5 rounded-full glass border border-white/8 text-white/50">
+                  {c}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

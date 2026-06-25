@@ -1,21 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import { MapPinIcon, GraduationCapIcon, Code2Icon } from "./icons";
 
-const stats = [
-  { label: "Age", value: "19" },
-  { label: "Location", value: "Melbourne" },
-  { label: "Degree", value: "B.CompSci" },
-  { label: "Major", value: "Data Science" },
-];
-
-const interests = [
-  "💻 Programming",
-  "🤖 Artificial Intelligence",
-  "📊 Data Science",
-  "🌐 Web Development",
-  "🚀 Entrepreneurship",
-  "🎯 Problem Solving",
+const highlights = [
+  { label: "Age", value: "19", icon: "🎂" },
+  { label: "University", value: "Deakin University", icon: "🎓" },
+  { label: "Role", value: "Student, Freelancer & Developer", icon: "💼" },
+  { label: "Location", value: "Melbourne, Australia", icon: "📍" },
+  { label: "Interests", value: "Coding, Marketing, Sales, AI, Business", icon: "🚀" },
+  { label: "Goal", value: "Software Developer & Entrepreneur", icon: "🎯" },
 ];
 
 export default function About() {
@@ -35,7 +27,8 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,59 +37,41 @@ export default function About() {
           >
             <div className="space-y-5 text-white/60 leading-relaxed text-[15px]">
               <p>
-                Hey! I&apos;m <strong className="text-white">Chethan</strong>, a 19-year-old Computer Science student originally from{" "}
-                <strong className="text-indigo-400">India</strong>, now living and studying in the vibrant city of{" "}
-                <strong className="text-indigo-400">Melbourne, Australia</strong>.
+                I&apos;m <strong className="text-white">Chethan</strong>, a 19-year-old Computer Science student at{" "}
+                <strong className="text-indigo-400">Deakin University, Melbourne</strong>. I originally moved from India to Australia to build my future in technology, business, and entrepreneurship.
               </p>
               <p>
-                Moving to Australia was a defining moment — it opened doors to world-class education and a diverse tech community. I&apos;m currently pursuing a{" "}
-                <strong className="text-white">Bachelor of Computer Science at Deakin University</strong>, majoring in{" "}
-                <strong className="text-white">Data Science</strong>.
+                I&apos;m interested in a lot of things — freelancing, web development, marketing, sales, AI, and building real-world projects. Right now I&apos;m focused on improving my coding and developer skills while also working on my own business ideas on the side.
               </p>
               <p>
-                I&apos;m deeply passionate about the intersection of technology and innovation — from writing clean code in C and Python, to exploring machine learning and building web experiences. Beyond tech, I&apos;m also building a personal brand and working on entrepreneurial projects.
+                My goal is to grow as a software developer, freelancer, and entrepreneur. I believe in learning by doing — so I&apos;m always working on something, whether it&apos;s a new project, a skill, or an idea I want to test.
               </p>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-2">
-              {interests.map((i) => (
-                <span key={i} className="text-sm px-3 py-1.5 rounded-full glass border border-white/8 text-white/70">
-                  {i}
-                </span>
-              ))}
             </div>
           </motion.div>
 
+          {/* Highlight cards */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-4"
+            className="grid grid-cols-1 gap-3"
           >
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((s) => (
-                <div key={s.label} className="glass border border-white/8 rounded-2xl p-5">
-                  <p className="text-2xl font-bold gradient-text">{s.value}</p>
-                  <p className="text-white/40 text-sm mt-1">{s.label}</p>
+            {highlights.map((h, i) => (
+              <motion.div
+                key={h.label}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="glass border border-white/8 rounded-2xl px-5 py-4 flex items-center gap-4"
+              >
+                <span className="text-xl">{h.icon}</span>
+                <div className="min-w-0">
+                  <p className="text-xs text-white/30 uppercase tracking-widest">{h.label}</p>
+                  <p className="text-sm text-white font-medium truncate">{h.value}</p>
                 </div>
-              ))}
-            </div>
-
-            {[
-              { Icon: MapPinIcon, title: "Location", desc: "Melbourne, Victoria, Australia" },
-              { Icon: GraduationCapIcon, title: "Education", desc: "Deakin University — B.CompSci, Data Science" },
-              { Icon: Code2Icon, title: "Focus", desc: "AI · Data Science · Web Development" },
-            ].map(({ Icon, title, desc }) => (
-              <div key={title} className="glass border border-white/8 rounded-2xl p-4 flex items-center gap-4">
-                <div className="p-2.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20">
-                  <Icon size={18} className="text-indigo-400" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-white">{title}</p>
-                  <p className="text-xs text-white/40">{desc}</p>
-                </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

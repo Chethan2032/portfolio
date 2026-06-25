@@ -1,24 +1,24 @@
 "use client";
 import { motion } from "framer-motion";
-import { ExternalLinkIcon, GithubIcon, PlusIcon } from "./icons";
+import { GithubIcon, PlusIcon } from "./icons";
 
 // ── Edit or add projects here ──────────────────────────────────────────────
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio website built with Next.js, TypeScript, Tailwind CSS and Framer Motion. Showcases my skills, projects and journey as a developer.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    emoji: "🌐",
-    color: "from-indigo-500/20 to-violet-500/20",
-    border: "border-indigo-500/20",
-    github: "https://github.com/Chethan2032",
-    live: "#",
-    badge: null,
+    title: "Freelancing",
+    description: "Working on freelance projects in web development and technology. Helping clients build their online presence and solve real problems. More details coming soon.",
+    tags: ["Web Development", "Client Work", "HTML/CSS", "JavaScript"],
+    emoji: "💼",
+    color: "from-amber-500/20 to-orange-500/20",
+    border: "border-amber-500/20",
+    github: null,
+    live: null,
+    badge: "Coming Soon",
   },
   {
     title: "ARITKX",
-    description: "My clothing brand — a creative venture blending streetwear aesthetics with bold identity. Website and full brand experience coming soon.",
-    tags: ["Branding", "Fashion", "Entrepreneurship"],
+    description: "My clothing brand — built around a bold identity and creative vision. Currently in development. Website and full brand experience launching soon.",
+    tags: ["Branding", "Fashion", "Entrepreneurship", "Business"],
     emoji: "👕",
     color: "from-pink-500/20 to-rose-500/20",
     border: "border-pink-500/20",
@@ -27,23 +27,12 @@ const projects = [
     badge: "Coming Soon",
   },
   {
-    title: "Freelance Projects",
-    description: "Web development and tech solutions delivered to clients as a freelancer — building real-world experience across different industries and requirements.",
-    tags: ["HTML", "CSS", "JavaScript", "Client Work"],
-    emoji: "💼",
-    color: "from-amber-500/20 to-orange-500/20",
-    border: "border-amber-500/20",
-    github: "https://github.com/Chethan2032",
-    live: null,
-    badge: null,
-  },
-  {
-    title: "University Programming Projects",
-    description: "Collection of programming assignments and software projects completed during my Computer Science degree at Deakin University.",
-    tags: ["C", "C++", "Python", "Algorithms"],
+    title: "University Projects",
+    description: "Programming and Computer Science projects completed as part of my Bachelor of Computer Science degree at Deakin University — covering algorithms, data structures, databases, and more.",
+    tags: ["C", "C++", "Python", "Algorithms", "Databases"],
     emoji: "🎓",
-    color: "from-emerald-500/20 to-teal-500/20",
-    border: "border-emerald-500/20",
+    color: "from-indigo-500/20 to-violet-500/20",
+    border: "border-indigo-500/20",
     github: "https://github.com/Chethan2032",
     live: null,
     badge: null,
@@ -65,10 +54,10 @@ export default function Projects() {
         >
           <p className="text-indigo-400 text-sm font-medium uppercase tracking-widest mb-3">Projects</p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            What I&apos;ve <span className="gradient-text">Built</span>
+            What I&apos;m <span className="gradient-text">Building</span>
           </h2>
           <p className="text-white/40 mt-4 max-w-lg mx-auto text-sm">
-            A growing collection of projects — from academic assignments to personal ventures.
+            A mix of freelance work, personal ventures, and academic projects — all part of the journey.
           </p>
         </motion.div>
 
@@ -86,7 +75,7 @@ export default function Projects() {
               <div className={`relative h-44 bg-gradient-to-br ${p.color} flex items-center justify-center border-b ${p.border}`}>
                 <span className="text-6xl">{p.emoji}</span>
                 {p.badge && (
-                  <span className="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full bg-pink-500/20 border border-pink-500/30 text-pink-300 font-medium">
+                  <span className="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/60 font-medium">
                     {p.badge}
                   </span>
                 )}
@@ -105,25 +94,19 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-3 mt-5">
-                  {p.github && (
+                {p.github && (
+                  <div className="flex gap-3 mt-5">
                     <a href={p.github} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors">
-                      <GithubIcon size={14} /> Code
+                      <GithubIcon size={14} /> View on GitHub
                     </a>
-                  )}
-                  {p.live && (
-                    <a href={p.live} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300 transition-colors">
-                      <ExternalLinkIcon size={14} /> Live Demo
-                    </a>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
 
-          {/* Placeholder card */}
+          {/* Placeholder */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +117,7 @@ export default function Projects() {
             <div className="p-3 rounded-full glass border border-white/10 mb-4 group-hover:border-indigo-500/30 transition-all">
               <PlusIcon size={20} className="text-white/30 group-hover:text-indigo-400 transition-colors" />
             </div>
-            <p className="text-white/30 text-sm group-hover:text-white/50 transition-colors">More projects coming soon</p>
+            <p className="text-white/30 text-sm group-hover:text-white/50 transition-colors">More coming soon</p>
             <p className="text-white/15 text-xs mt-1">Edit <code className="text-indigo-400/50">Projects.tsx</code> to add</p>
           </motion.div>
         </div>

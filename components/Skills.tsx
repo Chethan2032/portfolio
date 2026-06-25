@@ -2,18 +2,18 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "C Programming", icon: "⚙️", level: 75, color: "from-blue-500 to-blue-700" },
-  { name: "C++", icon: "🔷", level: 70, color: "from-sky-500 to-sky-700" },
-  { name: "Python", icon: "🐍", level: 80, color: "from-yellow-500 to-yellow-700" },
-  { name: "HTML", icon: "🌐", level: 85, color: "from-orange-500 to-orange-700" },
-  { name: "CSS", icon: "🎨", level: 80, color: "from-blue-400 to-blue-600" },
-  { name: "JavaScript", icon: "⚡", level: 70, color: "from-yellow-400 to-yellow-600" },
-  { name: "Data Science", icon: "📊", level: 72, color: "from-violet-500 to-violet-700" },
-  { name: "Git & GitHub", icon: "🔗", level: 75, color: "from-gray-400 to-gray-600" },
-  { name: "Problem Solving", icon: "🧠", level: 88, color: "from-pink-500 to-pink-700" },
+  { name: "Coding", icon: "💻", level: 75, color: "from-indigo-500 to-indigo-700" },
+  { name: "Web Development", icon: "🌐", level: 70, color: "from-blue-500 to-blue-700" },
+  { name: "Software Development", icon: "⚙️", level: 65, color: "from-sky-500 to-sky-700" },
+  { name: "Freelancing", icon: "💼", level: 72, color: "from-amber-500 to-amber-700" },
+  { name: "Marketing", icon: "📣", level: 68, color: "from-pink-500 to-pink-700" },
+  { name: "Sales", icon: "🤝", level: 65, color: "from-rose-500 to-rose-700" },
+  { name: "Entrepreneurship", icon: "🚀", level: 70, color: "from-violet-500 to-violet-700" },
+  { name: "Problem Solving", icon: "🧠", level: 85, color: "from-emerald-500 to-emerald-700" },
+  { name: "Communication", icon: "🗣️", level: 80, color: "from-teal-500 to-teal-700" },
 ];
 
-const tools = ["VS Code", "GitHub", "Jupyter Notebook", "Linux", "Terminal", "Figma"];
+const tools = ["VS Code", "GitHub", "Python", "HTML & CSS", "JavaScript", "Jupyter Notebook"];
 
 export default function Skills() {
   return (
@@ -35,7 +35,7 @@ export default function Skills() {
             Skills
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Technical <span className="gradient-text">Expertise</span>
+            What I <span className="gradient-text">Bring</span>
           </h2>
         </motion.div>
 
@@ -79,7 +79,7 @@ export default function Skills() {
           className="mt-12 text-center"
         >
           <p className="text-white/30 text-sm mb-4 uppercase tracking-widest">
-            Tools &amp; Environments
+            Tools &amp; Technologies
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {tools.map((t) => (
