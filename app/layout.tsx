@@ -5,14 +5,40 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Chethan | Computer Science Student & Aspiring Developer",
+  title: "Chethan | Portfolio",
   description:
-    "Personal portfolio of Chethan — Bachelor of Computer Science student at Deakin University, Melbourne. Passionate about AI, Data Science, and Software Development.",
-  keywords: ["Chethan", "Computer Science", "Deakin University", "Data Science", "Software Developer", "Melbourne"],
+    "Computer Science Student at Deakin University | Software Developer | AI, Data Science & Web Development",
+  keywords: [
+    "Chethan",
+    "Computer Science",
+    "Deakin University",
+    "Data Science",
+    "Software Developer",
+    "Melbourne",
+    "Portfolio",
+    "Freelancer",
+  ],
   openGraph: {
     title: "Chethan | Portfolio",
-    description: "CS Student at Deakin University — AI, Data Science & Web Development",
+    description:
+      "Computer Science Student at Deakin University | Software Developer | AI, Data Science & Web Development",
     type: "website",
+    url: "https://chethan2032.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chethan | Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chethan | Portfolio",
+    description:
+      "Computer Science Student at Deakin University | Software Developer | AI, Data Science & Web Development",
+    images: ["/og-image.jpg"],
   },
 };
 
