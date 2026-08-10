@@ -4,7 +4,9 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-const SITE_URL = "https://chethan2032.com";
+// Must be the www host: Vercel 308-redirects the apex to www, and Google will
+// not index a URL that redirects. This has to match Google's selected canonical.
+const SITE_URL = "https://www.chethan2032.com";
 const NAME = "Chethan Gangadharolla";
 const TITLE = `${NAME} | Computer Science Student & Developer`;
 const DESCRIPTION =
