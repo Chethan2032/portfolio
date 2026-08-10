@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   alternates: { canonical: SITE_URL },
+  verification: {
+    google: "UXnccoNbZi0rYtHBVZcZm0jsbQ2isjsF81z2RREDIz0",
+  },
   robots: {
     index: true,
     follow: true,
