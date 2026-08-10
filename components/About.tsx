@@ -37,7 +37,7 @@ export default function About() {
           >
             <div className="space-y-5 text-white/60 leading-relaxed text-[15px]">
               <p>
-                I&apos;m <strong className="text-white">Chethan</strong>, a 19-year-old Computer Science student at{" "}
+                I&apos;m <strong className="text-white">Chethan Gangadharolla</strong>, a 19-year-old Computer Science student at{" "}
                 <strong className="text-indigo-400">Deakin University, Melbourne</strong>. I originally moved from India to Australia to build my future in technology, business, and entrepreneurship.
               </p>
               <p>

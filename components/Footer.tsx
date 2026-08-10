@@ -7,11 +7,11 @@ export default function Footer() {
     <footer className="border-t border-white/5 py-10 px-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-center md:text-left">
-          <p className="font-bold gradient-text text-lg">Chethan</p>
+          <p className="font-bold gradient-text text-lg">Chethan Gangadharolla</p>
           <p className="text-white/30 text-xs mt-0.5">Computer Science Student · Melbourne, AU</p>
         </div>
 
-        <p className="text-white/20 text-xs">© {year} Chethan. All rights reserved.</p>
+        <p className="text-white/20 text-xs">© {year} Chethan Gangadharolla. All rights reserved.</p>
 
         <div className="flex gap-3">
           {[
