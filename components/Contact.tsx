@@ -5,7 +5,7 @@ import { MailIcon, LinkedinIcon, GithubIcon, InstagramIcon, SendIcon, MapPinIcon
 
 // ── Paste your Formspree endpoint here ─────────────────────────────────────
 // Get it free at https://formspree.io → New Form → copy the endpoint URL
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdenejeo";
 
 // ── Paste your real LinkedIn profile URL here ──────────────────────────────
 const LINKEDIN_URL = "https://linkedin.com/";
