@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowDownIcon, GithubIcon, LinkedinIcon, InstagramIcon, MailIcon } from "./icons";
 
 export default function Hero() {
@@ -124,14 +125,15 @@ export default function Hero() {
                 style={{ background: "linear-gradient(135deg, #818cf8, #a78bfa, #ec4899)" }}>
                 <div className="w-full h-full rounded-full bg-[#050508]" />
               </div>
-              <div className="absolute inset-[3px] rounded-full overflow-hidden glass flex items-center justify-center">
-                <div className="w-full h-full bg-gradient-to-br from-indigo-900/40 to-violet-900/40 flex flex-col items-center justify-center gap-2">
-                  <div className="text-6xl">👨‍💻</div>
-                  <p className="text-white/30 text-xs text-center px-4">
-                    Add photo to{" "}
-                    <code className="text-indigo-400">public/photo.jpg</code>
-                  </p>
-                </div>
+              <div className="absolute inset-[3px] rounded-full overflow-hidden">
+                <Image
+                  src="/photo.jpg"
+                  alt="Chethan"
+                  fill
+                  sizes="(max-width: 768px) 256px, 320px"
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
 
